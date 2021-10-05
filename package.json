@@ -48,7 +48,7 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "prepublish": "set NODE_ENV=production&& rimraf dist && mkdir dist && babel src/lib -d dist --copy-files",
+    "prepublish": "set NODE_ENV=production&&export NODE_ENV=production && set BABEL_ENV=production && export BABEL_ENV=production rimraf dist && mkdir dist && babel src/lib -d dist --copy-files",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
